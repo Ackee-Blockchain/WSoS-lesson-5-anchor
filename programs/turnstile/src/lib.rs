@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("7jfewpZYcNFarCUdbo8owLn25r48NDKy93qiYjMn6pmZ");
+declare_id!("BFMHkPfCWwStfpxyEgdkJCgfk2RqaBEcxfsUk4eBaEuu");
 
 // write your business logic here
 #[program]
@@ -14,7 +14,7 @@ pub mod turnstile {
     }
 
     #[allow(unused_variables)]
-    pub fn coin(ctx: Context<UpdateState>, dummy_arg: String) -> Result<()> {
+    pub fn coin(ctx: Context<UpdateState>) -> Result<()> {
         let state = &mut ctx.accounts.state;
         state.locked = false;
         Ok(())
